@@ -1,10 +1,10 @@
 module.exports = {
   siteMetadata: {
-    siteTitle: `Gatsby Starter hpp`,
-    siteTitleAlt: `Gatsby Starter hpp - @hppRC/gatsby-starter-hpp`,
-    siteHeadline: `Gatsby Starter hpp - Gatsby Starter from @hppRC`,
-    siteUrl: `https://gatsby-starter-hpp.netlify.com`,
-    siteDescription: `simple gatsby starter with mdx, typescript, pwa`,
+    siteTitle: `Gatsby Starter skeleton blog`,
+    siteTitleAlt: `Gatsby Starter skeleton blog - @hppRC/gatsby-starter-skeleton-blog`,
+    siteHeadline: `Gatsby Starter skeleton blog - Gatsby Starter from @hppRC`,
+    siteUrl: `https://gatsby-starter-skeleton-blog.netlify.com`,
+    siteDescription: `simple gatsby starter blog with mdx, typescript, pwa`,
     siteLanguage: `en`,
     siteImage: `/banner.png`, // real path -> https://gatsby-starter-hpp.netlify.com/icon.jpg
     author: `@osaremochi`, // twitter account id
