@@ -3,10 +3,9 @@ import { Layout } from '../layouts';
 import { SEO } from '../components';
 import styled from '@emotion/styled';
 import baseStyle from '../styles/base-style';
-import { useAllTags } from '../hooks';
 
 const Index: React.FCX = ({ className }) => (
-  <div className={className}>{useAllTags()}yeah</div>
+  <div className={className}>Gatsby Starter skeleton blog</div>
 );
 
 const StyledIndex = styled(Index)`
