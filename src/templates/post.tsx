@@ -37,7 +37,7 @@ const Post: React.FCX<{
 }> = ({ title, body, date, tags, fluid }) => (
   <article>
     <h1>{title}</h1>
-    <Img fluid={fluid} alt={title} backgroundColor={'#fff'} />
+    <Img fluid={fluid} alt='eyecatch' backgroundColor={'#fff'} />
     <h2>{date}</h2>
     {tags.map((tag, index) => (
       <li key={index}>{tag}</li>
