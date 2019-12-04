@@ -2,7 +2,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 
 type Props = {
   allMdx: {
-    nodes: Array<{
+    nodes: {
       id: string;
       body: string;
       excerpt: string;
@@ -17,7 +17,7 @@ type Props = {
           };
         };
       };
-    }>;
+    }[];
   };
 };
 

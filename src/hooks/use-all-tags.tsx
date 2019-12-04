@@ -2,11 +2,11 @@ import { graphql, useStaticQuery } from 'gatsby';
 
 type Props = {
   allMdx: {
-    nodes: Array<{
+    nodes: {
       frontmatter: {
         tags: string[];
       };
-    }>;
+    }[];
   };
 };
 

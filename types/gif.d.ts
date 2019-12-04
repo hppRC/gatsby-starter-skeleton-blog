@@ -1,5 +1,5 @@
 declare module '*.gif' {
-  let GifComponent: string;
+  const GifComponent: string;
   export default GifComponent;
 }
 //ex. import Gif from "example.gif"
