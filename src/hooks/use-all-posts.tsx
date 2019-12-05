@@ -1,4 +1,5 @@
 import { graphql, useStaticQuery } from 'gatsby';
+import { FluidObject } from 'gatsby-image';
 
 type Props = {
   allMdx: {
@@ -13,7 +14,7 @@ type Props = {
         tags: string[];
         cover: {
           childImageSharp: {
-            fluid: {};
+            fluid: FluidObject;
           };
         };
       };
