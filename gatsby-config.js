@@ -89,6 +89,7 @@ module.exports = {
         icon: `./static/icon.png`
       }
     },
-    `gatsby-plugin-offline`
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-netlify-cache`
   ]
 };
