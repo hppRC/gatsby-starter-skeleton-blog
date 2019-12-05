@@ -1,10 +1,10 @@
-# gatsby-starter-hpp
+# gatsby-starter-skeleton-blog
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e3f95f77-729d-4536-87de-f507758ba7f9/deploy-status)](https://app.netlify.com/sites/gatsby-starter-skeleton-blog/deploys)
 
-simplest gatsby skelton.
+All-in-one skelton blog.
 
-## Recomendation
+## Recomendations
 
 - node.js  
    `version: 13.2.0`
