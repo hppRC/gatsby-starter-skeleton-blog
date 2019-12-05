@@ -8,7 +8,6 @@ import baseStyle from '../styles/base-style';
 
 const Posts: React.FCX = ({ className }) => (
   <div className={className}>
-    {console.log(useAllPosts())}
     {useAllPosts().map(({ excerpt, frontmatter }, i) => {
       const { title, date, tags, cover } = frontmatter;
       const { fluid } = cover.childImageSharp;
