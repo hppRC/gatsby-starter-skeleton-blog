@@ -51,7 +51,14 @@ module.exports = {
         ]
       }
     },
+    {
+      resolve: `gatsby-plugin-webpack-bundle-analyzer`,
+      options: {
+        openAnalyzer: false
+      }
+    },
     `gatsby-plugin-netlify`,
+    `gatsby-plugin-netlify-cache`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-react-helmet-canonical-urls`,
@@ -69,9 +76,53 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-webpack-bundle-analyzer`,
+      resolve: `gatsby-plugin-feed`,
       options: {
-        openAnalyzer: false
+        query: `
+          {
+            site {
+              siteMetadata {
+                siteTitle
+                siteDescription
+                siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMdx } }) => {
+              const { siteUrl } = site.siteMetadata;
+              return allMdx.nodes.map(({ excerpt, html, frontmatter }) => {
+                const { slug, date } = frontmatter;
+                return Object.assign({}, frontmatter, {
+                  description: excerpt,
+                  date: date,
+                  url: `${siteUrl}/posts/${slug}`,
+                  guid: `${siteUrl}/posts/${slug}`,
+                  custom_elements: [{ 'content:encoded': html }]
+                });
+              });
+            },
+            query: `
+              {
+                allMdx(sort: { order: DESC, fields: [frontmatter___date] }) {
+                  nodes {
+                    excerpt
+                    html
+                    frontmatter {
+                      title
+                      date
+                      slug
+                    }
+                  }
+                }
+              }
+            `,
+            output: `/rss.xml`,
+            title: `Gatsby Starter skeleton blog RSS feed`
+          }
+        ]
       }
     },
     // gatsby-plugin-manifest should be described before gatsby-plugin-offline
@@ -89,7 +140,6 @@ module.exports = {
         icon: `./static/icon.png`
       }
     },
-    `gatsby-plugin-offline`,
-    `gatsby-plugin-netlify-cache`
+    `gatsby-plugin-offline`
   ]
 };
