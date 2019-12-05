@@ -39,8 +39,8 @@ const Post: React.FCX<{
     <h1>{title}</h1>
     <Img fluid={fluid} alt='eyecatch' backgroundColor={'#fff'} />
     <h2>{date}</h2>
-    {tags.map((tag, index) => (
-      <li key={index}>{tag}</li>
+    {tags.map((tag, i) => (
+      <li key={i}>{tag}</li>
     ))}
     <MDXRenderer>{body}</MDXRenderer>
   </article>
