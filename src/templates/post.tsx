@@ -3,7 +3,6 @@ import Img, { FluidObject } from 'gatsby-image';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import React from 'react';
 import { SEO } from 'src/components';
-import { Layout } from 'src/layouts';
 
 import styled from '@emotion/styled';
 
@@ -38,10 +37,10 @@ const Post: React.FCX<{
 }> = ({ title, body, date, tags, fluid }) => (
   <article>
     <h1>{title}</h1>
-    <Img fluid={fluid} alt='eyecatch' backgroundColor={'#fff'} />
+    <Img fluid={fluid} alt='eyecatch image' backgroundColor={'#fff'} />
     <h2>{date}</h2>
-    {tags.map((tag, index) => (
-      <li key={index}>{tag}</li>
+    {tags.map((tag, i) => (
+      <li key={i}>{tag}</li>
     ))}
     <MDXRenderer>{body}</MDXRenderer>
   </article>
@@ -54,7 +53,7 @@ export default ({ data, pageContext }: Props) => {
   const { title, date, tags, cover } = frontmatter;
   const { fluid } = cover.childImageSharp;
   return (
-    <Layout>
+    <>
       <SEO
         title={title}
         description={excerpt}
@@ -68,7 +67,7 @@ export default ({ data, pageContext }: Props) => {
         tags={tags}
         fluid={fluid}
       />
-    </Layout>
+    </>
   );
 };
 

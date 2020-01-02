@@ -20,6 +20,9 @@ const Header: React.FCX = ({ className }) => (
           <Link to='/contact'>Contact</Link>
         </li>
         <li>
+          <Link to='/posts'>Posts</Link>
+        </li>
+        <li>
           <Link to='/404'>404</Link>
         </li>
         <li>
