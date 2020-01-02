@@ -1,9 +1,10 @@
-import React from 'react';
 import { graphql } from 'gatsby';
 import Img, { FluidObject } from 'gatsby-image';
-import { Layout } from '../layouts';
-import { SEO } from '../components';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
+import React from 'react';
+import { SEO } from 'src/components';
+import { Layout } from 'src/layouts';
+
 import styled from '@emotion/styled';
 
 type Props = {
