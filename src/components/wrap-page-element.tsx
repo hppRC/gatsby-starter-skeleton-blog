@@ -1,8 +1,8 @@
 import React, { ReactNode } from 'react';
-import { SwitchContainer } from 'src/store';
+import Layout from 'src/layouts';
 
-export const WrapRootElement = ({ element }: { element: ReactNode }) => (
-  <SwitchContainer.Provider>{element}</SwitchContainer.Provider>
-);
+export const WrapPageElement = ({ element }: { element: ReactNode }) => {
+  return <Layout>{element}</Layout>;
+};
 
-export default WrapRootElement;
+export default WrapPageElement;
