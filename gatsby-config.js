@@ -15,9 +15,9 @@ module.exports = {
     ...config
   },
   plugins: [
+    `gatsby-plugin-emotion`,
     `gatsby-plugin-root-import`,
     `gatsby-plugin-typescript`,
-    `gatsby-plugin-emotion`,
     `gatsby-plugin-catch-links`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
