@@ -1,19 +1,25 @@
 import { css } from '@emotion/core';
 
 export const baseStyle = css`
+  flex: 1;
+
   width: 100%;
   max-width: 1400px;
-  height: auto;
-  min-height: 100vh;
 
   margin: 0 auto;
-  padding: 6rem 10%;
+  padding: 10vh 2vw 5rem 2vw;
 
+  h1 {
+    font-size: 4rem;
+    padding-bottom: 3rem;
+  }
+  @media screen and (max-width: 1100px) {
+  }
   @media screen and (max-width: 768px) {
-    padding: 6rem 7.5%;
   }
   @media screen and (max-width: 480px) {
-    padding: 6rem 5%;
+  }
+  @media screen and (max-height: 430px) {
   }
 `;
 

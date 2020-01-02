@@ -5,7 +5,7 @@ const config = {
   siteUrl: `https://gatsby-starter-skeleton-blog.netlify.com`,
   siteDescription: `simple gatsby starter blog with mdx, typescript, pwa`,
   siteLanguage: `en`,
-  siteImage: `/banner.png`, // real path -> https://gatsby-starter-hpp.netlify.com/icon.jpg
+  siteImage: `/banner.png`,
   author: `@osaremochi`, // twitter account id
   basePath: `/`
 };
@@ -15,6 +15,7 @@ module.exports = {
     ...config
   },
   plugins: [
+    `gatsby-plugin-root-import`,
     `gatsby-plugin-typescript`,
     `gatsby-plugin-emotion`,
     `gatsby-plugin-catch-links`,

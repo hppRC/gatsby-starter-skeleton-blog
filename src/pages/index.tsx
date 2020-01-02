@@ -1,20 +1,24 @@
 import React from 'react';
-import { Layout } from '../layouts';
-import { SEO } from '../components';
-import styled from '@emotion/styled';
-import baseStyle from '../styles/base-style';
+import { SEO } from 'src/components';
+import { baseStyle } from 'src/styles';
 
-const Index: React.FCX = ({ className }) => (
-  <div className={className}>Gatsby Starter skeleton blog</div>
-);
+import styled from '@emotion/styled';
+
+const Index: React.FCX = ({ className }) => {
+  return (
+    <main className={className}>
+      <h1>this is index page!</h1>
+    </main>
+  );
+};
 
 const StyledIndex = styled(Index)`
   ${baseStyle};
 `;
 
-export default () => (
-  <Layout>
-    <SEO title='Top' description='top page' pathname='/' />
+export default (props: any) => (
+  <>
+    <SEO title='Top' pathname={props.path} />
     <StyledIndex />
-  </Layout>
+  </>
 );

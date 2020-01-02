@@ -1,23 +1,24 @@
 import React from 'react';
-import { Layout } from '../layouts';
-import { SEO } from '../components';
+import { SEO } from 'src/components';
+import AboutMDX from 'src/internal/about.mdx';
+import baseStyle from 'src/styles/base-style';
+
 import styled from '@emotion/styled';
-import baseStyle from '../styles/base-style';
-import AboutMDX from "../mdx/about.mdx"
 
 const About: React.FCX = ({ className }) => (
-  <div className={className}>
+  <main className={className}>
+    <h1>About</h1>
     <AboutMDX />
-  </div>
+  </main>
 );
 
 const StyledAbout = styled(About)`
   ${baseStyle};
 `;
 
-export default () => (
-  <Layout>
-    <SEO title='About' description='about page' pathname='/about' />
+export default (props: any) => (
+  <>
+    <SEO title='About' pathname={props.path} />
     <StyledAbout />
-  </Layout>
+  </>
 );
