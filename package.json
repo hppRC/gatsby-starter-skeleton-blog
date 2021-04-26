@@ -22,7 +22,7 @@
     "@emotion/styled": "^10.0.23",
     "@mdx-js/mdx": "^1.5.1",
     "@mdx-js/react": "^1.5.1",
-    "@types/react": "^16.9.14",
+    "@types/react": "^17.0.0",
     "@types/react-helmet": "^5.0.14",
     "core-js": "^3.4.7",
     "eslint-scope": "^5.0.0",
